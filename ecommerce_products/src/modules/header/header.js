@@ -5,7 +5,7 @@ const insertMainHeader = (header) => {
     <nav class="navbar navbar-expand-lg px-4 py-4" role="navigation" aria-label="Menú principal">
       <!-- Logo -->
       <a class="navbar-brand" href="#">
-        <img src="../../public/img/logo.png" alt="El logo es la palabra sneakers">
+        <img src="../../../public/img/logo.png" alt="El logo es la palabra sneakers">
       </a>
 
       <!-- Botón para vista responsive-->
@@ -16,7 +16,7 @@ const insertMainHeader = (header) => {
       <!-- Menú hamburguesa -->
       <div class="collapse navbar-collapse" id="menuContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Collections</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../pages/collections/collections.html">Collections</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
           <li class="nav-item"><a class="nav-link" href="#">About</a></li>
