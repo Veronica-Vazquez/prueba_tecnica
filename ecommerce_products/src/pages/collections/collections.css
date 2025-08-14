@@ -1,0 +1,50 @@
+#priceRange::-moz-range-track {
+  background: #FF7E1B;
+  height: 6px;
+  border-radius: 3px;
+}
+
+/* Thumb (el circulito que se mueve) */
+#priceRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #FF7E1B;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -7px; /* para centrar verticalmente */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#priceRange::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #FF7E1B;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#priceRange::-webkit-slider-thumb:hover {
+  background-color: #e66a00;
+}
+
+#priceRange::-moz-range-thumb:hover {
+  background-color: #e66a00;
+}
+
+.sneaker-img {
+    width: 100%;           
+    height: 250px;         
+    object-fit: cover;     /* Corta y ajusta la imagen para que no se distorsione */
+    border-radius: 8px;    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sneaker-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
