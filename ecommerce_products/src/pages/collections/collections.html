@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="./collections.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (opcional, para el carrito) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main>
+        <div class="container my-5 min-vh-75">
+            <div class="text-center mb-5">
+                <h1>Every Style Deserves a Collection</h1>
+            </div>
+
+            <!-- Columna de filtros -->
+            <div class="row">
+                <!-- Sidebar de filtros -->
+                <aside class="col-md-3 mb-4">
+                    <h5>Filtrar por</h5>
+                    <hr>
+
+                    <!-- filtro por color -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Color</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="colorWhite">
+                            <label class="form-check-label" for="colorWhite">White</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="colorBlue">
+                            <label class="form-check-label" for="colorBlue">Blue</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="colorRed">
+                            <label class="form-check-label" for="colorRed">Red</label>
+                        </div>
+                    </div>
+
+                    <!-- filtro por precio -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Price</label>
+                        <input type="range" class="form-range" min="0" max="500" step="10" id="priceRange" value="500">
+                        <div class="d-flex justify-content-between">
+                            <small>$0 usd</small>
+                            <small id="priceValue">$500 usd</small>
+                        </div>
+                    </div>
+
+                    <!-- filtro por estilo -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Estilo</label>
+                        <select class="form-select" id="styleSelect">
+                            <option value="">Todos</option>
+                            <option value="sport">Sport</option>
+                            <option value="casual">Casual</option>
+                            <option value="urban">Urban</option>
+                        </select>
+                    </div>
+                </aside>
+
+                <!-- Catálogo de productos -->
+                <section class="col-md-9">
+                    <div class="row g-4">
+                        <!-- Repetir esta tarjeta para cada sneaker -->
+                        <div class="col-6 col-md-3 sneaker" data-color="pink" data-price="100" data-style="casual">
+                            <div class="card border-0 shadow-sm sneaker-card">
+                                <img src="https://images.unsplash.com/photo-1608667508764-33cf0726b13a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top sneaker-img" alt="Sneaker 1">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-0">Sneaker 1</h6>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>$100 usd</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 sneaker" data-color="blue" data-price="50" data-style="casual">
+                            <div class="card border-0 shadow-sm sneaker-card">
+                                <img src="https://images.unsplash.com/photo-1496202703211-aa28e9500c30?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top sneaker-img" alt="Sneaker 2">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-0">Sneaker 2</h6>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>$50 usd</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 sneaker" data-color="blue" data-price="30" data-style="sport">
+                            <div class="card border-0 shadow-sm sneaker-card">
+                                <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=1179&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top sneaker-img" alt="Sneaker 3">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-0">Sneaker 3</h6>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>$30 usd</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 sneaker" data-color="white" data-price="500" data-style="urban">
+                            <div class="card border-0 shadow-sm sneaker-card">
+                                <img src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top sneaker-img" alt="Sneaker 4">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-0">Sneaker 4</h6>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>$500 usd</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 sneaker" data-color="pink" data-price="100" data-style="sport">
+                            <div class="card border-0 shadow-sm sneaker-card">
+                                <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top sneaker-img" alt="Sneaker 1">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-0">Sneaker 5</h6>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>$100 usd</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 sneaker" data-color="yellow" data-price="50" data-style="urban">
+                            <div class="card border-0 shadow-sm sneaker-card">
+                                <img src="https://images.unsplash.com/photo-1628253747716-0c4f5c90fdda?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top sneaker-img" alt="Sneaker 2">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-0">Sneaker 6</h6>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>$50 usd</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 sneaker" data-color="white" data-price="290" data-style="urban">
+                            <div class="card border-0 shadow-sm sneaker-card">
+                                <img src="https://images.unsplash.com/photo-1679800558771-0e1737f489c0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top sneaker-img" alt="Sneaker 3">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-0">Sneaker 7</h6>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>$290 usd</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 sneaker" data-color="grey" data-price="120" data-style="casual">
+                            <div class="card border-0 shadow-sm sneaker-card">
+                                <img src="https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top sneaker-img" alt="Sneaker 4">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-0">Sneaker 8</h6>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <span>$120 usd</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script type="module" src="./collections.js"></script>
+</body>
+
+</html>
